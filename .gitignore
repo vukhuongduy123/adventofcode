@@ -1,0 +1,12 @@
+*.vcxitems
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+x64
+config
+*.txt
+src_socket
+.vs
+*.exe
+Debug
+*.pdb
