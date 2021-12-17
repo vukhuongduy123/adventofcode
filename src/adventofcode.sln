@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "day1_2021_sonic_sweep", "day1_2021_sonic_sweep\day1_2021_sonic_sweep.vcxproj", "{E5A6AD39-948B-424F-B856-1F4F6C085B08}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "day1_2021_sonic_sweep_part_2", "day1_2021_sonic_sweep_part_2\day1_2021_sonic_sweep_part_2.vcxproj", "{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E5A6AD39-948B-424F-B856-1F4F6C085B08}.Release|x64.Build.0 = Release|x64
 		{E5A6AD39-948B-424F-B856-1F4F6C085B08}.Release|x86.ActiveCfg = Release|Win32
 		{E5A6AD39-948B-424F-B856-1F4F6C085B08}.Release|x86.Build.0 = Release|Win32
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Debug|x64.ActiveCfg = Debug|x64
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Debug|x64.Build.0 = Debug|x64
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Debug|x86.ActiveCfg = Debug|Win32
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Debug|x86.Build.0 = Debug|Win32
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Release|x64.ActiveCfg = Release|x64
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Release|x64.Build.0 = Release|x64
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Release|x86.ActiveCfg = Release|Win32
+		{F1EE35E5-5536-4A4C-9AB2-35BC2734EF6D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

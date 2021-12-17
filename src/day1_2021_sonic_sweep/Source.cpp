@@ -15,7 +15,7 @@ int32_t main() {
     std::fstream input;
     //data.txt cotain input taken from https://adventofcode.com/2021/day/1/input
     input.open("data.txt", std::fstream::in);
-    std::vector<int> sonic_sweep;
+    std::vector<int32_t> sonic_sweep;
     while (input >> number)
         sonic_sweep.push_back(number);
     std::cout << CountIncreaseMeasurements(sonic_sweep);
