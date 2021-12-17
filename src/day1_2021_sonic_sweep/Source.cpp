@@ -13,6 +13,7 @@ int32_t CountIncreaseMeasurements(std::vector<int32_t> sonic_sweep) {
 int32_t main() {
     int32_t      number;
     std::fstream input;
+    //data.txt cotain input taken from https://adventofcode.com/2021/day/1/input
     input.open("data.txt", std::fstream::in);
     std::vector<int> sonic_sweep;
     while (input >> number)
