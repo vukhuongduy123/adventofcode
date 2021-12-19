@@ -103,7 +103,7 @@ int32_t GetLastBoardScore(std::vector<int32_t> number, std::vector<coordinate> b
 
 int32_t main() {
     std::fstream input;
-    // data.txt cotain input taken from
+    // data.txt contains input taken from
     // https://adventofcode.com/2021/day/4/input
     input.open("data.txt", std::fstream::in);
     std::vector<int32_t>    number = GetNumber(input);
