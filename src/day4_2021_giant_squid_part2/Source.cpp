@@ -6,11 +6,11 @@
 #include <vector>
 
 struct coordinate {
-    std::pair<int32_t, bool> coor[5][5];
+    std::pair<uint64_t, bool> coor[5][5];
 };
 
-std::vector<int32_t> Split(const std::string& s, char delim) {
-    std::vector<int32_t> result;
+std::vector<uint64_t> Split(const std::string& s, char delim) {
+    std::vector<uint64_t> result;
     std::stringstream    ss(s);
     std::string          item;
     while (getline(ss, item, delim)) {
@@ -23,11 +23,11 @@ std::vector<int32_t> Split(const std::string& s, char delim) {
 
 std::vector<coordinate> GetBoard(std::fstream& input) {
     std::vector<coordinate> board, tmp(1);
-    int32_t                 idx = 0, j = 0;
+    uint64_t                 idx = 0, j = 0;
     std::string             num;
     while (getline(input, num)) {
         if (!num.empty()) {
-            std::vector<int32_t> vec = Split(num, ' ');
+            std::vector<uint64_t> vec = Split(num, ' ');
             for (size_t i = 0; i < vec.size(); i++)
                 tmp[0].coor[j][i].first = vec[i];
             j++;
@@ -41,8 +41,8 @@ std::vector<coordinate> GetBoard(std::fstream& input) {
     return board;
 }
 
-std::vector<int32_t> GetNumber(std::fstream& input) {
-    std::vector<int32_t> number;
+std::vector<uint64_t> GetNumber(std::fstream& input) {
+    std::vector<uint64_t> number;
     std::string          num;
     input >> num;
     number = Split(num, ',');
@@ -77,8 +77,8 @@ bool IsWinnerBoard(coordinate board) {
     return false;
 }
 
-int32_t GetScoreBoard(coordinate board, int32_t winner_number) {
-    int32_t unmark_number = 0;
+uint64_t GetScoreBoard(coordinate board, uint64_t winner_number) {
+    uint64_t unmark_number = 0;
     for (int j = 0; j < 5; j++)
         for (int m = 0; m < 5; m++)
             if (!board.coor[j][m].second)
@@ -87,9 +87,9 @@ int32_t GetScoreBoard(coordinate board, int32_t winner_number) {
     return unmark_number * winner_number;
 }
 
-int32_t GetLastBoardScore(std::vector<int32_t>    number,
+uint64_t GetLastBoardScore(std::vector<uint64_t>    number,
                           std::vector<coordinate> board) {
-    int32_t size = board.size();
+    uint64_t size = board.size();
     for (int idx = 0; idx < number.size(); idx++)
         for (int i = 0; i < board.size(); i++) {
             for (int j = 0; j < 5; j++)
@@ -113,12 +113,12 @@ int32_t GetLastBoardScore(std::vector<int32_t>    number,
     return 0;
 }
 
-int32_t main() {
+uint64_t main() {
     std::fstream input;
     // data.txt cotain input taken from
     // https://adventofcode.com/2021/day/4/input
     input.open("data.txt", std::fstream::in);
-    std::vector<int32_t>    number = GetNumber(input);
+    std::vector<uint64_t>    number = GetNumber(input);
     std::vector<coordinate> board  = GetBoard(input);
     std::cout << GetLastBoardScore(number, board);
 }

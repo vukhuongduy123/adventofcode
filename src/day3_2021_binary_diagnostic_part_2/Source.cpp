@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 
-int32_t GetLifeSupportRating(std::vector<std::string> number) {
-    int32_t                  idx  = 0;
+uint64_t GetLifeSupportRating(std::vector<std::string> number) {
+    uint64_t                  idx  = 0;
     std::vector<std::string> copy = number;
     while (number.size() > 1) {
         auto pos = std::partition(
@@ -33,7 +33,7 @@ int32_t GetLifeSupportRating(std::vector<std::string> number) {
     return stoi(number[0], nullptr, 2) * stoi(copy[0], nullptr, 2);
 }
 
-int32_t main() {
+uint64_t main() {
     std::vector<std::string> number;
     std::string              num;
     std::fstream             input;

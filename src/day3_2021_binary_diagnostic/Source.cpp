@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-int32_t GetLifeSupportRating(std::vector<std::string> number) {
+uint64_t GetLifeSupportRating(std::vector<std::string> number) {
     std::string res;
     for (size_t i = 0; i < number[0].size(); i++) {
         std::partition(number.begin(), number.end(), [i](const std::string& s) {
@@ -19,7 +19,7 @@ int32_t GetLifeSupportRating(std::vector<std::string> number) {
     return gamma * epsilon;
 }
 
-int32_t main() {
+uint64_t main() {
     std::vector<std::string> number;
     std::string              num;
     std::fstream             input;

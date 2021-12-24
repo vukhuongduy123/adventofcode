@@ -3,9 +3,9 @@
 #include <string>
 #include <vector>
 
-int32_t GetMultiDepthAndHorizontalPos(
-    std::vector<std::pair<std::string, int32_t>> move_command) {
-    int32_t depth_pos = 0, horizontal_pos = 0, aim = 0;
+uint64_t GetMultiDepthAndHorizontalPos(
+    std::vector<std::pair<std::string, uint64_t>> move_command) {
+    uint64_t depth_pos = 0, horizontal_pos = 0, aim = 0;
     for (size_t i = 0; i < move_command.size(); i++) {
         if (move_command[i].first == "forward") {
             horizontal_pos += move_command[i].second;
@@ -20,9 +20,9 @@ int32_t GetMultiDepthAndHorizontalPos(
 
 int main() {
     std::string                                  command;
-    int32_t                                      value;
-    std::pair<std::string, int32_t>              command_pair;
-    std::vector<std::pair<std::string, int32_t>> command_move;
+    uint64_t                                      value;
+    std::pair<std::string, uint64_t>              command_pair;
+    std::vector<std::pair<std::string, uint64_t>> command_move;
     std::fstream                                 input;
     // data.txt cotain input taken from
     // https://adventofcode.com/2021/day/2/input
