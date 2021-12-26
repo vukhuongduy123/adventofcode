@@ -24,7 +24,7 @@ int32_t main() {
     std::fstream         input;
     std::string          num;
     // data.txt cotain input taken from
-    // https://adventofcode.com/2021/day/5/input
+    // https://adventofcode.com/2021/day/7/input
     input.open("data.txt", std::fstream::in);
     while (getline(input, num, ','))
         crab.push_back(stoi(num));
